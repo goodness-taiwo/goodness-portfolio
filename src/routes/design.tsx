@@ -22,19 +22,19 @@ export const Route = createFileRoute("/design")({
 const services: { title: string; body: string }[] = [
   {
     title: "Marketing sites",
-    body: "End-to-end design for landing pages and marketing sites — from wireframe to production-ready file, with the copy sitting inside the layout as it's drawn.",
+    body: "End-to-end design for landing pages and marketing sites — from wireframe to production-ready file, with the copy sitting inside the layout.",
   },
   {
     title: "Brand & identity systems",
-    body: "Type, colour, motion and spacing rules delivered as a working system — not a PDF that dies in a folder.",
+    body: "Type, colour, motion and spacing rules delivered as a working system a team can actually use.",
   },
   {
     title: "Product & UI design",
-    body: "Onboarding flows, dashboards and product surfaces designed for the person mid-task, not for the screenshot.",
+    body: "Onboarding flows, dashboards and product surfaces designed for the person mid-task.",
   },
   {
     title: "Design in the browser",
-    body: "I design in Figma but I stay close to the code. I hand off files that a real front-end team can actually build without a translator.",
+    body: "I hand off files that a real front-end team can actually build without a translator.",
   },
 ];
 
@@ -60,23 +60,25 @@ const projects: Project[] = [
   {
     client: "Flowdrive",
     year: "2024",
-    role: "Web design · Brand type · Motion direction",
+    role: "Web design · Design system · Motion direction",
     href: "https://tryflowdrive.com/",
     hrefLabel: "tryflowdrive.com",
-    headline: "Media hosting, dressed like a book cover.",
+    headline: "Media hosting site for Webflow teams.",
     product:
-      "Flowdrive is a media hosting service built for Webflow teams. It stores videos, images and files, streams them fast, and hands designers back the parts of their day they usually lose to file management. The category is loud and technical; the product is quiet and dependable. The website had to feel like the second thing.",
+      "Flowdrive is a media hosting service built for Webflow teams — a storage and delivery layer for the videos, images and files a design team ships every week.",
     did: [
-      "Designed the full marketing site — hero, features, pricing, footer",
-      "Set the type system: display serif for feeling, sans for the specifics",
-      "Directed motion — quiet product footage held inside rounded frames",
-      "Sat inside the copy while the layout was being drawn, so voice and design didn't disagree",
+      "Owned the end-to-end marketing site design in Figma — hero, features, pricing, comparison, footer",
+      "Built a reusable component library with tokenised type, spacing and colour scales for the front-end team to consume 1:1",
+      "Defined a 12-column responsive grid with fluid clamp-based type ramps so headlines hold their proportions from 360px to 1920px",
+      "Designed the product-in-context sections: recorded looped MP4s, exported at 2x, framed inside custom bezels and lazy-loaded with poster frames",
+      "Prototyped micro-interactions (hover states, scroll-linked reveals, sticky nav collapse) directly on the Figma prototype for QA before hand-off",
+      "Ran the annotated hand-off — breakpoints, motion timings, asset export presets and a Loom walkthrough per section",
     ],
     moves: [
-      { label: "Type", body: "A serif display headline doing the emotional work, sans-serif carrying the specifics." },
-      { label: "Palette", body: "Warm off-white paper as the canvas, a single accent orange for anything you're meant to touch." },
-      { label: "Product frame", body: "The app appears more like an artefact than a screenshot — rounded, held, considered." },
-      { label: "Social proof", body: "Logos treated as a quiet run of names rather than a wall of trust badges." },
+      { label: "Type scale", body: "Fluid clamp() ramp locked to an 8pt baseline; display face reserved for h1/h2 only so hierarchy stays legible on the smallest viewport." },
+      { label: "Colour tokens", body: "Neutral surface set plus a single saturated accent for CTAs. All values shipped as CSS custom properties so a theme swap is a token change, not a redesign." },
+      { label: "Product frames", body: "Custom SVG bezels sized to the exact aspect ratio of each recording — no letterboxing, no dead space around the product footage." },
+      { label: "Performance rules", body: "Above-the-fold budget of 120KB images, MP4 posters served before autoplay, and font subsetting to the exact glyph set used in the design." },
     ],
     shot: flowdriveShot,
     serial: "PD—01",
@@ -88,21 +90,18 @@ const projects: Project[] = [
     role: "Web design · Landing · Onboarding UX",
     href: "https://markdrop.app/",
     hrefLabel: "markdrop.app",
-    headline: "Client feedback, given a spine.",
+    headline: "Markdrop.app",
     product:
-      "Markdrop pulls messy client feedback out of Slack, WhatsApp and Figma comments and pins it directly onto the live site. Instead of a founder chasing five threads to find one piece of feedback, everything lives in one place — attached to the exact button or block it was about.",
+      "Markdrop is a visual feedback tool that pins client and teammate comments directly onto a live website.",
     did: [
-      "Designed the landing page top-to-bottom — hero, product story, pricing",
-      "Rewrote the value proposition to fit in a single scroll",
-      "Shaped the onboarding UX so first-run success is under a minute",
-      "Placed integration marks as a familiar row — not a wall of logos",
+      "Designed the full marketing site in Figma — hero, feature sections, pricing, FAQ and footer",
+      "Built a responsive layout system with defined breakpoints, spacing tokens and a reusable component set",
+      "Designed the onboarding flow — sign-up, first project setup, install-the-widget step and empty states",
+      "Produced the icon set, integration marks and in-page illustrations as a consistent visual family",
+      "Prototyped hover, focus and loading states end-to-end so the front-end team could implement without guessing behaviour",
+      "Delivered annotated hand-off with breakpoint specs, exported assets and a component-level README",
     ],
-    moves: [
-      { label: "One promise", body: "A single, oversized headline that names the pain directly — no cleverness before the value has landed." },
-      { label: "Product-as-argument", body: "The screenshot is the hero image, angled slightly, so the tool does the pitching." },
-      { label: "Integrations", body: "A small, familiar row — the visual equivalent of 'it plugs in where you already work'." },
-      { label: "Palette", body: "Purple used sparingly, as punctuation, not as background — the palette carries authority instead of noise." },
-    ],
+    moves: [],
     shot: markdropShot,
     serial: "PD—02",
     accent: "oklch(0.6 0.22 300)",
@@ -127,10 +126,11 @@ function Design() {
         <div className="mt-10 grid grid-cols-12 gap-8">
           <Reveal delay={240} className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Two shipped marketing sites, both live. Below: a plain list of
-              what I do as a designer, then each project explained the way I'd
-              explain it to a founder — what the product is, what I did, and
-              the specific moves that shaped the page.
+              Two marketing sites I've shipped and are currently live. Below is
+              a simple breakdown of what I do as a designer, followed by each
+              project explaining what the product is, what I handled, and the
+              specific design decisions that shaped how the page looks and
+              feels.
             </p>
           </Reveal>
         </div>
@@ -160,30 +160,6 @@ function Design() {
         ))}
       </section>
 
-      {/* CLOSING */}
-      <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-24 md:py-32 text-center">
-        <Reveal>
-          <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-            More on request
-          </p>
-        </Reveal>
-        <Reveal delay={120}>
-          <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] text-balance">
-            Case studies for private product work available on ask.
-          </h2>
-        </Reveal>
-        <Reveal delay={240}>
-          <a
-            href="mailto:goodypearls@gmail.com"
-            className="inline-flex items-center gap-3 mt-10 bg-foreground text-background pl-6 pr-4 py-3 text-sm group"
-          >
-            Request the extended portfolio
-            <span className="w-8 h-8 rounded-full bg-accent grid place-items-center text-background transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-        </Reveal>
-      </section>
     </>
   );
 }
@@ -209,7 +185,7 @@ function ServicesList() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Hover any line to see how it plays out in practice.
+              Hover any line to read it.
             </p>
           </Reveal>
         </div>
@@ -382,14 +358,14 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
 
         {/* Product + What I did + Moves */}
         <div className="mt-16 grid grid-cols-12 gap-8">
-          <Reveal delay={100} className="col-span-12 md:col-span-4">
+          <Reveal delay={100} className={project.moves.length ? "col-span-12 md:col-span-4" : "col-span-12 md:col-span-5"}>
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
               The product
             </p>
             <p className="mt-4 text-[15px] leading-relaxed">{project.product}</p>
           </Reveal>
 
-          <Reveal delay={200} className="col-span-12 md:col-span-4">
+          <Reveal delay={200} className={project.moves.length ? "col-span-12 md:col-span-4" : "col-span-12 md:col-span-7"}>
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
               What I did
             </p>
@@ -408,26 +384,28 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
             </ul>
           </Reveal>
 
-          <Reveal delay={300} className="col-span-12 md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-              Design moves
-            </p>
-            <ol className="mt-4 divide-y divide-border">
-              {project.moves.map((m, i) => (
-                <li key={i} className="py-3">
-                  <p
-                    className="text-[10px] font-mono uppercase tracking-[0.24em]"
-                    style={{ color: project.accent }}
-                  >
-                    {String(i + 1).padStart(2, "0")} — {m.label}
-                  </p>
-                  <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
-                    {m.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
+          {project.moves.length > 0 && (
+            <Reveal delay={300} className="col-span-12 md:col-span-4">
+              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
+                Design moves
+              </p>
+              <ol className="mt-4 divide-y divide-border">
+                {project.moves.map((m, i) => (
+                  <li key={i} className="py-3">
+                    <p
+                      className="text-[10px] font-mono uppercase tracking-[0.24em]"
+                      style={{ color: project.accent }}
+                    >
+                      {String(i + 1).padStart(2, "0")} — {m.label}
+                    </p>
+                    <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
+                      {m.body}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+          )}
         </div>
       </div>
     </section>

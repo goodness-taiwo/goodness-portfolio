@@ -13,10 +13,10 @@ export function Footer() {
             Brand voice work, editorial writing, and site design collaborations.
           </h2>
           <a
-            href="mailto:goodypearls@gmail.com"
+            href="mailto:goodness.a.olu@gmail.com"
             className="inline-flex items-center gap-3 mt-8 text-lg group"
           >
-            <span className="underline-grow">goodypearls@gmail.com</span>
+            <span className="underline-grow">goodness.a.olu@gmail.com</span>
             <span className="text-accent transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
@@ -33,7 +33,7 @@ export function Footer() {
           <div>
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground mb-3">Elsewhere</p>
             <ul className="space-y-2">
-              <li><a href="mailto:goodypearls@gmail.com" className="underline-grow">Email</a></li>
+              <li><a href="mailto:goodness.a.olu@gmail.com" className="underline-grow">Email</a></li>
               <li><a href="https://tryflowdrive.com/" target="_blank" rel="noreferrer" className="underline-grow">Flowdrive ↗</a></li>
               <li><a href="https://markdrop.app/" target="_blank" rel="noreferrer" className="underline-grow">Markdrop ↗</a></li>
             </ul>
@@ -43,7 +43,6 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex items-center justify-between text-xs text-muted-foreground">
           <span>© {year} Goodness Taiwo. Set in Fraunces & Inter.</span>
-          <span className="uppercase tracking-[0.24em]">Lagos / Remote</span>
         </div>
       </div>
     </footer>

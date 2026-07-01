@@ -64,23 +64,19 @@ const pieces: Piece[] = [
   {
     client: "Black Women App (BWA)",
     year: "2024",
-    kind: "Brand launch · Creative writer",
-    title: "A room, and then a network.",
-    intro:
-      "The brief was to launch an app. The real work was to write down what we already were before there was software — a room a Black woman could walk into and set her whole self down.",
-    pull:
-      "We didn't want to build a platform. We wanted to build the feeling of a friend saving you a seat.",
+    kind: "Brand launch · Creative lead",
+    title: "Black Women App — brand voice and launch copy.",
+    intro: "",
+    pull: "",
     did: [
-      "Wrote the brand narrative, tagline and homepage from scratch",
-      "Built a tone-of-voice guide the wider team could write in",
-      "Named product surfaces and shaped the launch essay",
-      "Sat with founders on messaging until the whole company sounded like one person",
+      "Developed the full brand narrative — mission statement, positioning, and the story used across launch, press and investor materials",
+      "Wrote the tone-of-voice guide (principles, do/don't examples, vocabulary sheet) that the wider team writes in",
+      "Wrote every line of homepage copy — hero, feature sections, social proof, footer CTA",
+      "Wrote in-app microcopy: onboarding, empty states, notifications, transactional emails",
+      "Named the core product surfaces so navigation and marketing use the same vocabulary",
+      "Wrote the launch essay and supporting social captions for launch week",
     ],
-    body: [
-      "Before Black Women App was an app, it was a room. A group chat, a series of voice notes at midnight, a shared document where somebody had begun a sentence and three other women had finished it. The product had to prove it could hold that.",
-      "For the launch, we wrote in the second person and stayed there. No 'users'. No 'community members'. You. Because the woman on the other side of the screen didn't need another platform to sign up for; she needed to feel recognised in the first eight seconds.",
-      "The homepage was three moves: a promise, a proof, and an open door. Everything else — the features, the roadmap, the polite tour — waited politely on the second page. It converted better than any version we tested against.",
-    ],
+    body: [],
     tone: { bg: "oklch(0.92 0.03 40)", ink: "oklch(0.22 0.02 40)", accent: "oklch(0.55 0.16 30)" },
     serial: "PW—01",
   },
@@ -88,22 +84,18 @@ const pieces: Piece[] = [
     client: "Lorchain Labs",
     year: "2024",
     kind: "Brand & technical writer",
-    title: "Documentation, written like it wants to be read.",
-    intro:
-      "Most developer documentation forgets there is a human on the other side of the screen, half a coffee in, trying to ship before standup. I rewrote Lorchain's developer surface with that person in mind.",
-    pull:
-      "A good doc doesn't just answer the question. It quietly reassures you that you're not stupid for asking it.",
+    title: "Lorchain Labs — brand copy and developer documentation.",
+    intro: "",
+    pull: "",
     did: [
-      "Rewrote the developer documentation from the reader's task down, not the API up",
-      "Tightened brand voice: retired 'seamless', 'leverage', 'reimagined' — on paper",
-      "Wrote quickstarts, error messages and CLI copy",
-      "Sat with engineers to translate correct-but-unreadable prose into plain English",
+      "Rewrote the marketing site copy — homepage, product pages, pricing and about",
+      "Restructured the developer documentation from a task-first perspective (what the developer is trying to do), rather than an API-reference dump",
+      "Wrote quickstarts, tutorials and CLI reference pages, tested against the actual product before publishing",
+      "Sharpened error messages and inline hints so failure states told the developer what to try next",
+      "Defined a brand voice guide the engineering team could use for release notes and changelogs",
+      "Ran editorial passes with engineers to translate correct-but-dense prose into plain, usable English",
     ],
-    body: [
-      "The original documentation was correct and unreadable — a common combination. Every page assumed you already understood the thing you'd come to the page to understand. We reversed the order: start with what the developer is actually trying to do, then hand them the smallest possible amount of API to do it.",
-      "In parallel, we tightened the brand voice: warm, exact, allergic to jargon. What replaced the tired words were verbs that describe what the product actually does — the kind of language a senior engineer uses when they've stopped trying to impress anybody.",
-      "Support tickets on the affected surfaces dropped noticeably in the following weeks. That, for a technical writer, is the only review that counts.",
-    ],
+    body: [],
     tone: { bg: "oklch(0.24 0.02 250)", ink: "oklch(0.96 0.01 85)", accent: "oklch(0.75 0.14 200)" },
     serial: "PW—02",
   },
@@ -111,22 +103,18 @@ const pieces: Piece[] = [
     client: "Whizzcard",
     year: "2023",
     kind: "Brand writer · Fintech",
-    title: "Money, without the theatre.",
-    intro:
-      "Fintech has a tendency to shout. Whizzcard is a card, not a rocket ship, and the audience knows the difference. The job was to sound like a company that respects your intelligence and your inbox.",
-    pull:
-      "One card. Three sentences. A promise the product could actually keep.",
+    title: "Whizzcard — product voice and onboarding copy.",
+    intro: "",
+    pull: "",
     did: [
-      "Rewrote homepage, product pages and onboarding copy",
-      "Retired the tired fintech lexicon and wrote a short, defensible replacement",
-      "Sharpened push notifications, receipts and transactional emails",
-      "Delivered a lightweight tone-of-voice sheet the team still uses",
+      "Rewrote homepage and product page copy for clarity and conversion",
+      "Wrote the end-to-end onboarding flow — KYC prompts, verification screens, success states",
+      "Wrote transactional copy: receipts, push notifications, statement descriptions and support responses",
+      "Retired category clichés and delivered a short, defensible replacement vocabulary the team still uses",
+      "Wrote lifecycle emails (welcome, activation, re-engagement) with a consistent tone across touchpoints",
+      "Delivered a lightweight voice sheet with sample sentences for common product moments",
     ],
-    body: [
-      "We started by writing down every phrase the category had exhausted — 'the future of', 'reimagined', 'seamless', 'financial freedom' — and agreed, on paper, never to use them. That single constraint did most of the work.",
-      "The homepage became almost embarrassingly short. A hero of one line and a subhead. A single card, angled just so. Three benefits, one per sentence, each phrased the way a friend would say it if you asked, over dinner, why you'd want the thing. No fireworks.",
-      "For the onboarding, we wrote every screen as if the user was already mid-task and mildly annoyed at being interrupted — which, on a phone, they usually are. The copy shrank. The completion rate didn't.",
-    ],
+    body: [],
     tone: { bg: "oklch(0.94 0.04 140)", ink: "oklch(0.2 0.02 140)", accent: "oklch(0.55 0.14 150)" },
     serial: "PW—03",
   },
@@ -134,20 +122,15 @@ const pieces: Piece[] = [
     client: "Independent",
     year: "2025",
     kind: "Essay · Craft",
-    title: "On writing for founders who don't like writing.",
-    intro:
-      "A short essay on how I pull a company's voice out of Slack messages, half-finished decks and one very good voice note — and turn it into something a stranger could love.",
-    pull:
-      "Voice isn't invented in a workshop. It's overheard, then written down carefully.",
+    title: "Writing for founders who want a better copy.",
+    intro: "",
+    pull: "",
     did: [
-      "Ongoing personal essay series on brand voice and craft",
-      "Written to double as a working method for founder clients",
+      "Ongoing essay series on brand voice, positioning and copy for early-stage founders",
+      "Published as a repeatable method — extracting a founder's real voice from calls, decks and product conversations",
+      "Used as a working reference on client engagements to align on tone before writing begins",
     ],
-    body: [
-      "Founders who dislike writing tend to be excellent talkers. That's the material. I ask for a thirty-minute call, no slides, and I record it. What I'm listening for isn't the pitch — I've read the pitch — it's the aside. The place where the founder forgets they're being watched and describes the product the way they'd describe it to a friend at a dinner they didn't want to attend.",
-      "Then I go home and I write down that voice. I don't invent, I don't sprinkle. I just remove the ums and put a paragraph break where the pause was. Nine times out of ten, that's the copy.",
-      "The tenth time is a rewrite, because sometimes the founder is trying, in real time, to convince themselves. That's a different job — a slower one — and it's the one I like most.",
-    ],
+    body: [],
     tone: { bg: "oklch(0.18 0.01 60)", ink: "oklch(0.96 0.01 85)", accent: "oklch(0.72 0.16 60)" },
     serial: "PW—04",
   },
@@ -165,16 +148,15 @@ function Writing() {
         </Reveal>
         <Reveal delay={120}>
           <h1 className="mt-6 font-display text-6xl md:text-[10vw] leading-[0.9] text-balance">
-            The written <em className="italic text-accent">work.</em>
+            Writing, <em className="italic text-accent">on the page.</em>
           </h1>
         </Reveal>
         <div className="mt-10 grid grid-cols-12 gap-8">
           <Reveal delay={240} className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Writing is a service before it's an artefact. Below is a plain
-              list of what I actually do for founders and product teams —
-              followed by four pieces from shipped work, each with the exact
-              part I owned.
+              A plain list of what I do as a brand and creative writer,
+              followed by selected pieces from shipped work — each with the
+              exact part I owned.
             </p>
           </Reveal>
         </div>
@@ -218,7 +200,7 @@ function Writing() {
         </Reveal>
         <Reveal delay={240}>
           <a
-            href="mailto:goodypearls@gmail.com"
+            href="mailto:goodness.a.olu@gmail.com"
             className="inline-flex items-center gap-3 mt-10 bg-foreground text-background pl-6 pr-4 py-3 text-sm group"
           >
             Ask for the extended reel
@@ -253,8 +235,7 @@ function ServicesList() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Hover a role to read it. Most engagements are a mix of two or
-              three — never all six at once.
+              Hover a role. Most engagements are a mix of two or three.
             </p>
           </Reveal>
         </div>
@@ -299,15 +280,11 @@ function ServicesList() {
                   <div
                     className="grid transition-all duration-500 ease-out"
                     style={{
-                      gridTemplateRows: isActive ? "1fr" : "0fr",
-                      opacity: isActive ? 1 : 0,
+                      gridTemplateRows: "0fr",
+                      opacity: 0,
                     }}
                   >
-                    <div className="overflow-hidden">
-                      <p className="pt-5 pl-16 max-w-xl text-muted-foreground leading-relaxed">
-                        {s.body}
-                      </p>
-                    </div>
+                    <div className="overflow-hidden" />
                   </div>
                 </li>
               </Reveal>
@@ -349,17 +326,17 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
                     ✦ {piece.kind}
                   </p>
                   <p
-                    className="font-display italic text-2xl md:text-3xl leading-[1.15] text-balance"
+                    className="font-display text-3xl md:text-5xl leading-[1] text-balance"
                     style={{ color: piece.tone.ink }}
                   >
-                    “{piece.pull}”
+                    {piece.client}
                   </p>
                   <div
                     className="mt-6 h-px w-16"
                     style={{ background: piece.tone.accent }}
                   />
-                  <p className="mt-4 font-display text-lg" style={{ color: piece.tone.ink }}>
-                    {piece.client}
+                  <p className="mt-4 text-[11px] uppercase tracking-[0.24em]" style={{ color: piece.tone.ink, opacity: 0.7 }}>
+                    {piece.year}
                   </p>
                 </div>
                 {/* corner marks */}
@@ -384,15 +361,9 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
               {piece.title}
             </h2>
           </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-xl">
-              {piece.intro}
-            </p>
-          </Reveal>
-
           {/* What I did */}
-          <Reveal delay={220}>
-            <div className="mt-12">
+          <Reveal delay={160}>
+            <div className="mt-8">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
                 What I did
               </p>
@@ -406,20 +377,6 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </Reveal>
-
-          {/* Excerpt body */}
-          <Reveal delay={260}>
-            <div className="mt-12">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                From the piece
-              </p>
-              <div className="mt-4 space-y-6 max-w-xl text-[15px] leading-relaxed">
-                {piece.body.map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
-              </div>
             </div>
           </Reveal>
         </div>
