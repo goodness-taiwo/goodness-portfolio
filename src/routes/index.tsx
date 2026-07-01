@@ -29,8 +29,8 @@ function Index() {
             <p className="rise text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
               Portfolio — 2022 / 2026
             </p>
-            <h1 className="rise rise-delay-1 mt-6 font-display text-[15vw] md:text-[9.5vw] leading-[0.88] tracking-[-0.03em] text-balance">
-              Words that <em className="italic text-accent">carry</em>,
+            <h1 className="rise rise-delay-1 mt-6 font-display text-[11vw] md:text-[6.5vw] leading-[0.9] tracking-[-0.03em] text-balance">
+              Words that <em className="italic text-accent">last</em>,
               <br />
               interfaces that <em className="italic">stay.</em>
             </h1>
@@ -140,34 +140,10 @@ function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14">
-            <WritingCard
-              image={bwaCover}
-              client="Black Women App"
-              title="A room, and then a network."
-              excerpt="Before it was an app, it was a room — the kind of room where a woman finally exhaled. We wrote toward that feeling. Not a platform. A place with the door held open."
-              tag="Brand launch essay"
-            />
-            <WritingCard
-              image={lorchainCover}
-              client="Lorchain Labs"
-              title="Documentation, written like it wants to be read."
-              excerpt="Most technical writing forgets there's a human at the other end of the screen, half a coffee in, trying to ship. We rewrote the whole developer surface with that human in mind — and the support tickets got quieter."
-              tag="Technical / brand"
-            />
-            <WritingCard
-              image={whizzCover}
-              client="Whizzcard"
-              title="Money, without the theatre."
-              excerpt="Fintech loves to shout. We went the other way. A single card, three sentences, and a promise the product could actually keep — that was the whole homepage, and it converted better than the version with the fireworks."
-              tag="Product voice"
-            />
-            <WritingCard
-              image={heroArt}
-              client="Independent"
-              title="Writing for founders who want a better copy."
-              excerpt="An essay series on pulling a company's real voice out of decks, calls and product conversations — and turning it into copy a stranger could love."
-              tag="Essay"
-            />
+            <WritingCard image={bwaCover} client="Black Women App" />
+            <WritingCard image={lorchainCover} client="Lorchain Labs" />
+            <WritingCard image={whizzCover} client="Whizzcard" />
+            <WritingCard image={heroArt} client="Independent" />
           </div>
         </div>
       </section>
@@ -188,7 +164,7 @@ function Index() {
               className="md:col-span-7"
               image={flowdriveShot}
               client="Flowdrive"
-              title="Media hosting, dressed like a book cover."
+              title="Media hosting site."
               href="https://tryflowdrive.com/"
               meta="Marketing site · Brand type · Motion"
             />
@@ -196,7 +172,7 @@ function Index() {
               className="md:col-span-5"
               image={markdropShot}
               client="Markdrop"
-              title="Client feedback, given a spine."
+              title="Markdrop.app"
               href="https://markdrop.app/"
               meta="Product site · Landing · Onboarding"
             />
@@ -208,19 +184,18 @@ function Index() {
       <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-24 md:py-32 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-4">
           <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">04 — How I work</p>
-          <h2 className="font-display text-5xl md:text-6xl mt-3 leading-[0.95]">Slow enough to be right.</h2>
+          <h2 className="font-display text-5xl md:text-6xl mt-3 leading-[0.95]">How I work.</h2>
         </div>
         <ol className="col-span-12 md:col-span-8 divide-y divide-border">
           {[
-            ["Listen", "Before I open a document I sit with your product, your users and — where I can — the way you talk about the work in private. The voice is usually already in the room."],
-            ["Shape", "I draft in passes. First for meaning, then for rhythm, then for the small edits that make a paragraph feel inevitable."],
-            ["Place", "Copy lives inside a layout. I write and design at the same time so the two never quietly disagree on the finished page."],
-            ["Hand over", "You get a document you can defend in a meeting, and a design file (or a live site) that treats your words with care."],
-          ].map(([h, b], i) => (
-            <li key={h} className="py-8 grid grid-cols-12 gap-4 items-start">
+            "Understand product / brand",
+            "Shape",
+            "Write / design",
+            "Handover",
+          ].map((h, i) => (
+            <li key={h} className="py-8 grid grid-cols-12 gap-4 items-center">
               <span className="col-span-2 text-sm text-muted-foreground font-mono">0{i + 1}</span>
-              <h3 className="col-span-3 font-display text-2xl">{h}</h3>
-              <p className="col-span-12 md:col-span-7 text-muted-foreground leading-relaxed">{b}</p>
+              <h3 className="col-span-10 font-display text-2xl md:text-3xl">{h}</h3>
             </li>
           ))}
         </ol>
@@ -230,20 +205,18 @@ function Index() {
 }
 
 function WritingCard({
-  image, client, title, excerpt, tag,
-}: { image: string; client: string; title: string; excerpt: string; tag: string }) {
+  image, client,
+}: { image: string; client: string }) {
   return (
-    <article className="group">
+    <Link to="/writing" className="group block">
       <div className="aspect-[4/3] overflow-hidden bg-muted mb-6 grain">
         <img src={image} alt="" loading="lazy" className="w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.03]" />
       </div>
-      <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-        <span>{client}</span>
-        <span>{tag}</span>
+      <div className="flex items-baseline justify-between gap-6">
+        <h3 className="font-display text-3xl md:text-4xl leading-tight">{client}</h3>
+        <span className="text-sm underline-grow shrink-0">Check it out →</span>
       </div>
-      <h3 className="mt-3 font-display text-3xl md:text-4xl leading-tight text-balance">{title}</h3>
-      <p className="mt-4 text-muted-foreground leading-relaxed">{excerpt}</p>
-    </article>
+    </Link>
   );
 }
 
