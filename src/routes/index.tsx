@@ -29,8 +29,8 @@ function Index() {
             <p className="rise text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
               Portfolio — 2022 / 2026
             </p>
-            <h1 className="rise rise-delay-1 mt-6 font-display text-[15vw] md:text-[9.5vw] leading-[0.88] tracking-[-0.03em] text-balance">
-              Words that <em className="italic text-accent">carry</em>,
+            <h1 className="rise rise-delay-1 mt-6 font-display text-[11vw] md:text-[6.5vw] leading-[0.9] tracking-[-0.03em] text-balance">
+              Words that <em className="italic text-accent">last</em>,
               <br />
               interfaces that <em className="italic">stay.</em>
             </h1>
@@ -140,34 +140,10 @@ function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14">
-            <WritingCard
-              image={bwaCover}
-              client="Black Women App"
-              title="A room, and then a network."
-              excerpt="Before it was an app, it was a room — the kind of room where a woman finally exhaled. We wrote toward that feeling. Not a platform. A place with the door held open."
-              tag="Brand launch essay"
-            />
-            <WritingCard
-              image={lorchainCover}
-              client="Lorchain Labs"
-              title="Documentation, written like it wants to be read."
-              excerpt="Most technical writing forgets there's a human at the other end of the screen, half a coffee in, trying to ship. We rewrote the whole developer surface with that human in mind — and the support tickets got quieter."
-              tag="Technical / brand"
-            />
-            <WritingCard
-              image={whizzCover}
-              client="Whizzcard"
-              title="Money, without the theatre."
-              excerpt="Fintech loves to shout. We went the other way. A single card, three sentences, and a promise the product could actually keep — that was the whole homepage, and it converted better than the version with the fireworks."
-              tag="Product voice"
-            />
-            <WritingCard
-              image={heroArt}
-              client="Independent"
-              title="Writing for founders who want a better copy."
-              excerpt="An essay series on pulling a company's real voice out of decks, calls and product conversations — and turning it into copy a stranger could love."
-              tag="Essay"
-            />
+            <WritingCard image={bwaCover} client="Black Women App" />
+            <WritingCard image={lorchainCover} client="Lorchain Labs" />
+            <WritingCard image={whizzCover} client="Whizzcard" />
+            <WritingCard image={heroArt} client="Independent" />
           </div>
         </div>
       </section>
