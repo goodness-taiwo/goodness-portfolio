@@ -6,7 +6,7 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Goodness Taiwo" },
       { name: "description", content: "Get in touch with Goodness Taiwo about brand writing, editorial and web design projects." },
       { property: "og:title", content: "Contact — Goodness Taiwo" },
-      { property: "og:description", content: "Email goodypearls@gmail.com to start a conversation." },
+      { property: "og:description", content: "Email goodness.a.olu@gmail.com to start a conversation." },
     ],
   }),
   component: Contact,
@@ -29,12 +29,12 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:goodypearls@gmail.com?subject=New%20project%20—"
+            href="mailto:goodness.a.olu@gmail.com?subject=New%20project%20—"
             className="group mt-12 block border-y border-border py-10"
           >
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">Write to</p>
             <p className="mt-3 font-display text-4xl md:text-6xl underline-grow inline-block">
-              goodypearls@gmail.com
+              goodness.a.olu@gmail.com
             </p>
             <p className="mt-4 inline-flex items-center gap-2 text-accent">
               Open your mail client <span className="transition-transform group-hover:translate-x-1">→</span>

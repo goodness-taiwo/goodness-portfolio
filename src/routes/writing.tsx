@@ -218,7 +218,7 @@ function Writing() {
         </Reveal>
         <Reveal delay={240}>
           <a
-            href="mailto:goodypearls@gmail.com"
+            href="mailto:goodness.a.olu@gmail.com"
             className="inline-flex items-center gap-3 mt-10 bg-foreground text-background pl-6 pr-4 py-3 text-sm group"
           >
             Ask for the extended reel
