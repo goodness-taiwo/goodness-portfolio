@@ -165,16 +165,15 @@ function Writing() {
         </Reveal>
         <Reveal delay={120}>
           <h1 className="mt-6 font-display text-6xl md:text-[10vw] leading-[0.9] text-balance">
-            The written <em className="italic text-accent">work.</em>
+            Writing, <em className="italic text-accent">on the page.</em>
           </h1>
         </Reveal>
         <div className="mt-10 grid grid-cols-12 gap-8">
           <Reveal delay={240} className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Writing is a service before it's an artefact. Below is a plain
-              list of what I actually do for founders and product teams —
-              followed by four pieces from shipped work, each with the exact
-              part I owned.
+              A plain list of what I do as a brand and creative writer,
+              followed by selected pieces from shipped work — each with the
+              exact part I owned.
             </p>
           </Reveal>
         </div>
@@ -253,8 +252,7 @@ function ServicesList() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Hover a role to read it. Most engagements are a mix of two or
-              three — never all six at once.
+              Hover a role. Most engagements are a mix of two or three.
             </p>
           </Reveal>
         </div>
@@ -299,15 +297,11 @@ function ServicesList() {
                   <div
                     className="grid transition-all duration-500 ease-out"
                     style={{
-                      gridTemplateRows: isActive ? "1fr" : "0fr",
-                      opacity: isActive ? 1 : 0,
+                      gridTemplateRows: "0fr",
+                      opacity: 0,
                     }}
                   >
-                    <div className="overflow-hidden">
-                      <p className="pt-5 pl-16 max-w-xl text-muted-foreground leading-relaxed">
-                        {s.body}
-                      </p>
-                    </div>
+                    <div className="overflow-hidden" />
                   </div>
                 </li>
               </Reveal>
