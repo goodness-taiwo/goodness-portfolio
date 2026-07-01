@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
-const links = [
+const links: { to: "/" | "/writing" | "/design" | "/about" | "/contact"; label: string; exact?: boolean }[] = [
   { to: "/", label: "Index", exact: true },
   { to: "/writing", label: "Writing" },
   { to: "/design", label: "Design" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function Nav() {
   return (
