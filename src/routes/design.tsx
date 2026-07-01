@@ -22,19 +22,19 @@ export const Route = createFileRoute("/design")({
 const services: { title: string; body: string }[] = [
   {
     title: "Marketing sites",
-    body: "End-to-end design for landing pages and marketing sites — from wireframe to production-ready file, with the copy sitting inside the layout as it's drawn.",
+    body: "End-to-end design for landing pages and marketing sites — from wireframe to production-ready file, with the copy sitting inside the layout.",
   },
   {
     title: "Brand & identity systems",
-    body: "Type, colour, motion and spacing rules delivered as a working system — not a PDF that dies in a folder.",
+    body: "Type, colour, motion and spacing rules delivered as a working system a team can actually use.",
   },
   {
     title: "Product & UI design",
-    body: "Onboarding flows, dashboards and product surfaces designed for the person mid-task, not for the screenshot.",
+    body: "Onboarding flows, dashboards and product surfaces designed for the person mid-task.",
   },
   {
     title: "Design in the browser",
-    body: "I design in Figma but I stay close to the code. I hand off files that a real front-end team can actually build without a translator.",
+    body: "I hand off files that a real front-end team can actually build without a translator.",
   },
 ];
 
@@ -127,10 +127,11 @@ function Design() {
         <div className="mt-10 grid grid-cols-12 gap-8">
           <Reveal delay={240} className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Two shipped marketing sites, both live. Below: a plain list of
-              what I do as a designer, then each project explained the way I'd
-              explain it to a founder — what the product is, what I did, and
-              the specific moves that shaped the page.
+              Two marketing sites I've shipped and are currently live. Below is
+              a simple breakdown of what I do as a designer, followed by each
+              project explaining what the product is, what I handled, and the
+              specific design decisions that shaped how the page looks and
+              feels.
             </p>
           </Reveal>
         </div>
@@ -209,7 +210,7 @@ function ServicesList() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Hover any line to see how it plays out in practice.
+              Hover any line to read it.
             </p>
           </Reveal>
         </div>
