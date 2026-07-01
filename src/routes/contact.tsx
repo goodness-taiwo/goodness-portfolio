@@ -52,11 +52,6 @@ function Contact() {
             <li>— Marketing site design (or writing + design together)</li>
           </ul>
 
-          <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground mt-12">Not a fit</p>
-          <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
-            <li>— SEO farms and volume content</li>
-            <li>— Work that requires me to sound like anyone but myself</li>
-          </ul>
 
           <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground mt-12">Response time</p>
           <p className="mt-3">Within two working days. Written by me.</p>

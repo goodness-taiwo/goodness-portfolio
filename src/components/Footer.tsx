@@ -43,7 +43,6 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex items-center justify-between text-xs text-muted-foreground">
           <span>© {year} Goodness Taiwo. Set in Fraunces & Inter.</span>
-          <span className="uppercase tracking-[0.24em]">Lagos / Remote</span>
         </div>
       </div>
     </footer>
