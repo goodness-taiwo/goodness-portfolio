@@ -326,17 +326,17 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
                     ✦ {piece.kind}
                   </p>
                   <p
-                    className="font-display italic text-2xl md:text-3xl leading-[1.15] text-balance"
+                    className="font-display text-3xl md:text-5xl leading-[1] text-balance"
                     style={{ color: piece.tone.ink }}
                   >
-                    “{piece.pull}”
+                    {piece.client}
                   </p>
                   <div
                     className="mt-6 h-px w-16"
                     style={{ background: piece.tone.accent }}
                   />
-                  <p className="mt-4 font-display text-lg" style={{ color: piece.tone.ink }}>
-                    {piece.client}
+                  <p className="mt-4 text-[11px] uppercase tracking-[0.24em]" style={{ color: piece.tone.ink, opacity: 0.7 }}>
+                    {piece.year}
                   </p>
                 </div>
                 {/* corner marks */}
@@ -361,15 +361,9 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
               {piece.title}
             </h2>
           </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-xl">
-              {piece.intro}
-            </p>
-          </Reveal>
-
           {/* What I did */}
-          <Reveal delay={220}>
-            <div className="mt-12">
+          <Reveal delay={160}>
+            <div className="mt-8">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
                 What I did
               </p>
@@ -383,20 +377,6 @@ function PieceBlock({ piece, index }: { piece: Piece; index: number }) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </Reveal>
-
-          {/* Excerpt body */}
-          <Reveal delay={260}>
-            <div className="mt-12">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                From the piece
-              </p>
-              <div className="mt-4 space-y-6 max-w-xl text-[15px] leading-relaxed">
-                {piece.body.map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
-              </div>
             </div>
           </Reveal>
         </div>
