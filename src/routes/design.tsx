@@ -358,14 +358,14 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
 
         {/* Product + What I did + Moves */}
         <div className="mt-16 grid grid-cols-12 gap-8">
-          <Reveal delay={100} className="col-span-12 md:col-span-4">
+          <Reveal delay={100} className={project.moves.length ? "col-span-12 md:col-span-4" : "col-span-12 md:col-span-5"}>
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
               The product
             </p>
             <p className="mt-4 text-[15px] leading-relaxed">{project.product}</p>
           </Reveal>
 
-          <Reveal delay={200} className="col-span-12 md:col-span-4">
+          <Reveal delay={200} className={project.moves.length ? "col-span-12 md:col-span-4" : "col-span-12 md:col-span-7"}>
             <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
               What I did
             </p>
@@ -384,26 +384,28 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
             </ul>
           </Reveal>
 
-          <Reveal delay={300} className="col-span-12 md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-              Design moves
-            </p>
-            <ol className="mt-4 divide-y divide-border">
-              {project.moves.map((m, i) => (
-                <li key={i} className="py-3">
-                  <p
-                    className="text-[10px] font-mono uppercase tracking-[0.24em]"
-                    style={{ color: project.accent }}
-                  >
-                    {String(i + 1).padStart(2, "0")} — {m.label}
-                  </p>
-                  <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
-                    {m.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
+          {project.moves.length > 0 && (
+            <Reveal delay={300} className="col-span-12 md:col-span-4">
+              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
+                Design moves
+              </p>
+              <ol className="mt-4 divide-y divide-border">
+                {project.moves.map((m, i) => (
+                  <li key={i} className="py-3">
+                    <p
+                      className="text-[10px] font-mono uppercase tracking-[0.24em]"
+                      style={{ color: project.accent }}
+                    >
+                      {String(i + 1).padStart(2, "0")} — {m.label}
+                    </p>
+                    <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
+                      {m.body}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+          )}
         </div>
       </div>
     </section>
