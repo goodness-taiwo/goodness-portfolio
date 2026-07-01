@@ -160,30 +160,6 @@ function Design() {
         ))}
       </section>
 
-      {/* CLOSING */}
-      <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-24 md:py-32 text-center">
-        <Reveal>
-          <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-            More on request
-          </p>
-        </Reveal>
-        <Reveal delay={120}>
-          <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] text-balance">
-            Case studies for private product work available on ask.
-          </h2>
-        </Reveal>
-        <Reveal delay={240}>
-          <a
-            href="mailto:goodness.a.olu@gmail.com"
-            className="inline-flex items-center gap-3 mt-10 bg-foreground text-background pl-6 pr-4 py-3 text-sm group"
-          >
-            Request the extended portfolio
-            <span className="w-8 h-8 rounded-full bg-accent grid place-items-center text-background transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-        </Reveal>
-      </section>
     </>
   );
 }
