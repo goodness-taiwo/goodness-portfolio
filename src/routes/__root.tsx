@@ -82,6 +82,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Goodness Taiwo — Brand Writer & Web Designer" },
+      { name: "description", content: "My Portfolio" },
+      { property: "og:description", content: "My Portfolio" },
+      { name: "twitter:description", content: "My Portfolio" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0fbf4e92-cb40-4921-954e-9ab732752d0c/id-preview-c14b8f1d--b7c2aa45-5f05-4b81-81c3-c61b5bc62c38.lovable.app-1782906929437.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0fbf4e92-cb40-4921-954e-9ab732752d0c/id-preview-c14b8f1d--b7c2aa45-5f05-4b81-81c3-c61b5bc62c38.lovable.app-1782906929437.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
