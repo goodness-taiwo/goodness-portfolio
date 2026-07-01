@@ -94,29 +94,35 @@ function Index() {
         </div>
         <div className="col-span-12 md:col-span-8">
           <p className="font-display text-3xl md:text-5xl leading-[1.1] text-balance">
-            I write the way I design: with restraint, rhythm, and a stubborn
-            belief that a good sentence can do the work of ten.
+            Goodness Taiwo is a brand and creative writer, and a web
+            designer with three years of experience helping startups,
+            founders and growing businesses build brands that connect
+            with people.
           </p>
           <div className="mt-10 grid md:grid-cols-2 gap-8 text-[15px] leading-relaxed text-muted-foreground">
             <p>
-              I started writing for the web three years ago and haven't stopped
-              since. Most of my days are spent between two windows — a document
-              where I'm shaping voice, and a canvas where I'm laying that voice
-              onto a page. Brands I've worked with sit somewhere between
-              editorial, fintech and creative tech: <span className="text-foreground">Black Women App</span>,
-              where I wrote as their creative lead; <span className="text-foreground">Lorchain Labs</span>,
-              where I moved between brand story and technical documentation;
-              and <span className="text-foreground">Whizzcard</span>, where I gave a fintech product a
-              warm, straight-talking voice.
+              She combines strategy, storytelling and design to build
+              websites and brand experiences that are clear, engaging
+              and easy to remember. As Creative Lead at{" "}
+              <span className="text-foreground">Black Women App</span>,
+              she developed the brand story, launch campaigns and
+              in-app content. At{" "}
+              <span className="text-foreground">Lorchain Labs</span>,
+              she moved between brand copy and technical documentation.
+              At <span className="text-foreground">Whizzcard</span>,
+              she shaped the voice of a fintech product.
             </p>
             <p>
-              On the design side I've partnered with product teams like{" "}
+              Alongside writing, she designs modern,
+              conversion-focused websites — partnering with product
+              teams like{" "}
               <a href="https://tryflowdrive.com/" target="_blank" rel="noreferrer" className="text-foreground underline-grow">Flowdrive</a>{" "}
               and{" "}
               <a href="https://markdrop.app/" target="_blank" rel="noreferrer" className="text-foreground underline-grow">Markdrop</a>{" "}
-              to shape marketing sites that feel considered — pages where the
-              type, the space and the copy are pulling in the same direction.
-              I'm not interested in more; I'm interested in <span className="italic text-foreground">right</span>.
+              to create marketing sites where content and design work
+              together seamlessly. Rather than treating writing and
+              design as separate disciplines, she approaches them as
+              one process.
             </p>
           </div>
         </div>
@@ -158,8 +164,8 @@ function Index() {
             <WritingCard
               image={heroArt}
               client="Independent"
-              title="On writing for founders who don't like writing."
-              excerpt="An essay on the small, unglamorous act of pulling a company's voice out of Slack messages, half-finished decks and one very good voice note — and turning it into something a stranger could love."
+              title="Writing for founders who want a better copy."
+              excerpt="An essay series on pulling a company's real voice out of decks, calls and product conversations — and turning it into copy a stranger could love."
               tag="Essay"
             />
           </div>
