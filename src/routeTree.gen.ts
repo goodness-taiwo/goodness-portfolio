@@ -18,6 +18,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MercyIndexRouteImport } from './routes/mercy.index'
 import { Route as MercyWorkRouteImport } from './routes/mercy.work'
+import { Route as MercyAboutRouteImport } from './routes/mercy.about'
 
 const WritingRoute = WritingRouteImport.update({
   id: '/writing',
@@ -64,6 +65,11 @@ const MercyWorkRoute = MercyWorkRouteImport.update({
   path: '/work',
   getParentRoute: () => MercyRoute,
 } as any)
+const MercyAboutRoute = MercyAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => MercyRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/mercy': typeof MercyRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
+  '/mercy/about': typeof MercyAboutRoute
   '/mercy/work': typeof MercyWorkRoute
   '/mercy/': typeof MercyIndexRoute
 }
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/design': typeof DesignRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
+  '/mercy/about': typeof MercyAboutRoute
   '/mercy/work': typeof MercyWorkRoute
   '/mercy': typeof MercyIndexRoute
 }
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/mercy': typeof MercyRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
+  '/mercy/about': typeof MercyAboutRoute
   '/mercy/work': typeof MercyWorkRoute
   '/mercy/': typeof MercyIndexRoute
 }
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/mercy'
     | '/sitemap.xml'
     | '/writing'
+    | '/mercy/about'
     | '/mercy/work'
     | '/mercy/'
   fileRoutesByTo: FileRoutesByTo
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/design'
     | '/sitemap.xml'
     | '/writing'
+    | '/mercy/about'
     | '/mercy/work'
     | '/mercy'
   id:
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/mercy'
     | '/sitemap.xml'
     | '/writing'
+    | '/mercy/about'
     | '/mercy/work'
     | '/mercy/'
   fileRoutesById: FileRoutesById
@@ -208,15 +220,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MercyWorkRouteImport
       parentRoute: typeof MercyRoute
     }
+    '/mercy/about': {
+      id: '/mercy/about'
+      path: '/about'
+      fullPath: '/mercy/about'
+      preLoaderRoute: typeof MercyAboutRouteImport
+      parentRoute: typeof MercyRoute
+    }
   }
 }
 
 interface MercyRouteChildren {
+  MercyAboutRoute: typeof MercyAboutRoute
   MercyWorkRoute: typeof MercyWorkRoute
   MercyIndexRoute: typeof MercyIndexRoute
 }
 
 const MercyRouteChildren: MercyRouteChildren = {
+  MercyAboutRoute: MercyAboutRoute,
   MercyWorkRoute: MercyWorkRoute,
   MercyIndexRoute: MercyIndexRoute,
 }
