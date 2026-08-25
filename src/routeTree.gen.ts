@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WritingRouteImport } from './routes/writing'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as MercyRouteImport } from './routes/mercy'
 import { Route as DesignRouteImport } from './routes/design'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -24,6 +25,11 @@ const WritingRoute = WritingRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MercyRoute = MercyRouteImport.update({
+  id: '/mercy',
+  path: '/mercy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DesignRoute = DesignRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
+  '/mercy': typeof MercyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
+  '/mercy': typeof MercyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
+  '/mercy': typeof MercyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
 }
@@ -79,16 +88,25 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/design'
+    | '/mercy'
     | '/sitemap.xml'
     | '/writing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/design' | '/sitemap.xml' | '/writing'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/design'
+    | '/mercy'
+    | '/sitemap.xml'
+    | '/writing'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
     | '/design'
+    | '/mercy'
     | '/sitemap.xml'
     | '/writing'
   fileRoutesById: FileRoutesById
@@ -98,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   DesignRoute: typeof DesignRoute
+  MercyRoute: typeof MercyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WritingRoute: typeof WritingRoute
 }
@@ -116,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mercy': {
+      id: '/mercy'
+      path: '/mercy'
+      fullPath: '/mercy'
+      preLoaderRoute: typeof MercyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/design': {
@@ -154,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DesignRoute: DesignRoute,
+  MercyRoute: MercyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WritingRoute: WritingRoute,
 }
