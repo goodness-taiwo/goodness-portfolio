@@ -11,11 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WritingRouteImport } from './routes/writing'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as OluwoleRouteImport } from './routes/oluwole'
 import { Route as MercyRouteImport } from './routes/mercy'
 import { Route as DesignRouteImport } from './routes/design'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as OluwoleIndexRouteImport } from './routes/oluwole.index'
 import { Route as MercyIndexRouteImport } from './routes/mercy.index'
 import { Route as MercyWritingRouteImport } from './routes/mercy.writing'
 import { Route as MercyWorkRouteImport } from './routes/mercy.work'
@@ -30,6 +32,11 @@ const WritingRoute = WritingRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OluwoleRoute = OluwoleRouteImport.update({
+  id: '/oluwole',
+  path: '/oluwole',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MercyRoute = MercyRouteImport.update({
@@ -56,6 +63,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const OluwoleIndexRoute = OluwoleIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OluwoleRoute,
 } as any)
 const MercyIndexRoute = MercyIndexRouteImport.update({
   id: '/',
@@ -89,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
   '/mercy': typeof MercyRouteWithChildren
+  '/oluwole': typeof OluwoleRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
   '/mercy/about': typeof MercyAboutRoute
@@ -96,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/mercy/work': typeof MercyWorkRoute
   '/mercy/writing': typeof MercyWritingRoute
   '/mercy/': typeof MercyIndexRoute
+  '/oluwole/': typeof OluwoleIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -109,6 +123,7 @@ export interface FileRoutesByTo {
   '/mercy/work': typeof MercyWorkRoute
   '/mercy/writing': typeof MercyWritingRoute
   '/mercy': typeof MercyIndexRoute
+  '/oluwole': typeof OluwoleIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -117,6 +132,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
   '/mercy': typeof MercyRouteWithChildren
+  '/oluwole': typeof OluwoleRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
   '/mercy/about': typeof MercyAboutRoute
@@ -124,6 +140,7 @@ export interface FileRoutesById {
   '/mercy/work': typeof MercyWorkRoute
   '/mercy/writing': typeof MercyWritingRoute
   '/mercy/': typeof MercyIndexRoute
+  '/oluwole/': typeof OluwoleIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -133,6 +150,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/design'
     | '/mercy'
+    | '/oluwole'
     | '/sitemap.xml'
     | '/writing'
     | '/mercy/about'
@@ -140,6 +158,7 @@ export interface FileRouteTypes {
     | '/mercy/work'
     | '/mercy/writing'
     | '/mercy/'
+    | '/oluwole/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -153,6 +172,7 @@ export interface FileRouteTypes {
     | '/mercy/work'
     | '/mercy/writing'
     | '/mercy'
+    | '/oluwole'
   id:
     | '__root__'
     | '/'
@@ -160,6 +180,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/design'
     | '/mercy'
+    | '/oluwole'
     | '/sitemap.xml'
     | '/writing'
     | '/mercy/about'
@@ -167,6 +188,7 @@ export interface FileRouteTypes {
     | '/mercy/work'
     | '/mercy/writing'
     | '/mercy/'
+    | '/oluwole/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -175,6 +197,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DesignRoute: typeof DesignRoute
   MercyRoute: typeof MercyRouteWithChildren
+  OluwoleRoute: typeof OluwoleRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WritingRoute: typeof WritingRoute
 }
@@ -193,6 +216,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/oluwole': {
+      id: '/oluwole'
+      path: '/oluwole'
+      fullPath: '/oluwole'
+      preLoaderRoute: typeof OluwoleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mercy': {
@@ -229,6 +259,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/oluwole/': {
+      id: '/oluwole/'
+      path: '/'
+      fullPath: '/oluwole/'
+      preLoaderRoute: typeof OluwoleIndexRouteImport
+      parentRoute: typeof OluwoleRoute
     }
     '/mercy/': {
       id: '/mercy/'
@@ -286,12 +323,24 @@ const MercyRouteChildren: MercyRouteChildren = {
 
 const MercyRouteWithChildren = MercyRoute._addFileChildren(MercyRouteChildren)
 
+interface OluwoleRouteChildren {
+  OluwoleIndexRoute: typeof OluwoleIndexRoute
+}
+
+const OluwoleRouteChildren: OluwoleRouteChildren = {
+  OluwoleIndexRoute: OluwoleIndexRoute,
+}
+
+const OluwoleRouteWithChildren =
+  OluwoleRoute._addFileChildren(OluwoleRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DesignRoute: DesignRoute,
   MercyRoute: MercyRouteWithChildren,
+  OluwoleRoute: OluwoleRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WritingRoute: WritingRoute,
 }
