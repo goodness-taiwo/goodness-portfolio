@@ -125,8 +125,9 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isMercy = pathname === "/mercy" || pathname.startsWith("/mercy/");
+  const isOluwole = pathname === "/oluwole" || pathname.startsWith("/oluwole/");
 
-  if (isMercy) {
+  if (isMercy || isOluwole) {
     return (
       <QueryClientProvider client={queryClient}>
         <Outlet />

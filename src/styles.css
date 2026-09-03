@@ -240,3 +240,65 @@
 @utility pulse-dot {
   animation: pulse-dot 2.2s ease-out infinite;
 }
+
+/* ---- Scoped theme: Oluwole Heritage portfolio (/oluwole) ---- */
+.oluwole {
+  --graphite: oklch(0.14 0.012 255);
+  --graphite-deep: oklch(0.1 0.012 255);
+  --graphite-card: oklch(0.18 0.016 255);
+  --cobalt: oklch(0.68 0.13 250);
+  --signal: oklch(0.78 0.15 84);
+
+  --background: var(--graphite-deep);
+  --foreground: oklch(0.94 0.012 245);
+  --card: var(--graphite-card);
+  --card-foreground: oklch(0.94 0.012 245);
+  --popover: var(--graphite-card);
+  --popover-foreground: oklch(0.94 0.012 245);
+  --primary: var(--cobalt);
+  --primary-foreground: var(--graphite-deep);
+  --secondary: oklch(0.2 0.018 255);
+  --secondary-foreground: oklch(0.94 0.012 245);
+  --muted: oklch(0.2 0.018 255);
+  --muted-foreground: oklch(0.69 0.025 245);
+  --accent: var(--cobalt);
+  --accent-foreground: var(--graphite-deep);
+  --border: oklch(0.29 0.025 250);
+  --input: oklch(0.29 0.025 250);
+  --ring: var(--cobalt);
+
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.oluwole h1, .oluwole h2, .oluwole h3, .oluwole h4 {
+  font-family: var(--font-tech);
+  font-variation-settings: normal;
+  letter-spacing: -0.035em;
+}
+
+.oluwole ::selection {
+  background: var(--signal);
+  color: var(--graphite-deep);
+}
+
+@utility ow-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--border) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--border) 55%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility ow-scan {
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 5px, color-mix(in oklab, var(--cobalt) 8%, transparent) 6px);
+}
+
+@keyframes ow-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(12px, -8px, 0); }
+}
+
+@utility ow-drift {
+  animation: ow-drift 8s ease-in-out infinite;
+}
