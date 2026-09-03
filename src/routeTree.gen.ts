@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WritingRouteImport } from './routes/writing'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as OluwoleRouteImport } from './routes/oluwole'
 import { Route as MercyRouteImport } from './routes/mercy'
 import { Route as DesignRouteImport } from './routes/design'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -30,6 +31,11 @@ const WritingRoute = WritingRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OluwoleRoute = OluwoleRouteImport.update({
+  id: '/oluwole',
+  path: '/oluwole',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MercyRoute = MercyRouteImport.update({
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
   '/mercy': typeof MercyRouteWithChildren
+  '/oluwole': typeof OluwoleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
   '/mercy/about': typeof MercyAboutRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
+  '/oluwole': typeof OluwoleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
   '/mercy/about': typeof MercyAboutRoute
@@ -117,6 +125,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/design': typeof DesignRoute
   '/mercy': typeof MercyRouteWithChildren
+  '/oluwole': typeof OluwoleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/writing': typeof WritingRoute
   '/mercy/about': typeof MercyAboutRoute
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/design'
     | '/mercy'
+    | '/oluwole'
     | '/sitemap.xml'
     | '/writing'
     | '/mercy/about'
@@ -146,6 +156,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/design'
+    | '/oluwole'
     | '/sitemap.xml'
     | '/writing'
     | '/mercy/about'
@@ -160,6 +171,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/design'
     | '/mercy'
+    | '/oluwole'
     | '/sitemap.xml'
     | '/writing'
     | '/mercy/about'
@@ -175,6 +187,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DesignRoute: typeof DesignRoute
   MercyRoute: typeof MercyRouteWithChildren
+  OluwoleRoute: typeof OluwoleRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WritingRoute: typeof WritingRoute
 }
@@ -193,6 +206,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/oluwole': {
+      id: '/oluwole'
+      path: '/oluwole'
+      fullPath: '/oluwole'
+      preLoaderRoute: typeof OluwoleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mercy': {
@@ -292,6 +312,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DesignRoute: DesignRoute,
   MercyRoute: MercyRouteWithChildren,
+  OluwoleRoute: OluwoleRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WritingRoute: WritingRoute,
 }
