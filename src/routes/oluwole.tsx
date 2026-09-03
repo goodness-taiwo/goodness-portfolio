@@ -17,7 +17,7 @@ function OluwoleLayout() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
         <nav className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between px-6 md:px-10">
           <Link to="/oluwole" className="font-tech text-sm font-semibold tracking-[-0.02em]">
-            Oluwole Heritage<span className="text-signal"> /</span>
+            Oluwole Heritage<span className="text-primary"> /</span>
           </Link>
           <div className="hidden items-center gap-8 md:flex">
             {links.slice(1).map((link) => (

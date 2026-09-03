@@ -248,6 +248,7 @@
   --graphite-card: oklch(0.18 0.016 255);
   --cobalt: oklch(0.68 0.13 250);
   --signal: oklch(0.78 0.15 84);
+  --signal-foreground: var(--graphite-deep);
 
   --background: var(--graphite-deep);
   --foreground: oklch(0.94 0.012 245);
