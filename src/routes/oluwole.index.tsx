@@ -28,9 +28,9 @@ const experience = [
 ];
 
 const work = [
-  { number: "01", name: "GenRev", type: "AI-powered social media automation", image: genrevHome, tone: "The product was complex. The experience didn’t have to be." },
-  { number: "02", name: "Mango Entertainment", type: "Entertainment, video and live interaction", image: mangoHome, tone: "A high-volume content experience with room to breathe." },
-  { number: "03", name: "Tax & Compliance", type: "Professional services and practical tools", image: taxHome, tone: "Making dense information easier to navigate and trust." },
+  { id: "genrev", number: "01", name: "GenRev", type: "AI-powered social media automation", image: genrevHome, tone: "The product was complex. The experience didn’t have to be." },
+  { id: "mango", number: "02", name: "Mango Entertainment", type: "Entertainment, video and live interaction", image: mangoHome, tone: "A high-volume content experience with room to breathe." },
+  { id: "tax-compliance", number: "03", name: "Tax & Compliance", type: "Professional services and practical tools", image: taxHome, tone: "Making dense information easier to navigate and trust." },
 ];
 
 const capabilities = [
@@ -76,7 +76,7 @@ function Home() {
           <h2 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">Design gets attention. Words give it direction.</h2>
           <p className="mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground">I work at the intersection of design, technology and communication — taking complicated ideas and turning them into experiences that feel clear and considered.</p>
           <div className="mt-16 space-y-16">
-            {work.map((item, i) => <Reveal key={item.name} delay={i * 80}><Link to="/oluwole/work" hash={item.name.toLowerCase().replaceAll(" ", "-").replace("&", "and")} className="group block"><div className="grid gap-7 md:grid-cols-12 md:items-center"><div className="md:col-span-7"><OluwoleFrame src={item.image.url} alt={`${item.name} website homepage`} label={`${item.name} / live work`} /></div><div className="md:col-span-5"><p className="font-mono text-xs text-primary">{item.number}</p><h3 className="mt-3 text-3xl font-semibold transition-colors group-hover:text-primary md:text-4xl">{item.name}</h3><p className="mt-2 text-sm text-muted-foreground">{item.type}</p><p className="mt-6 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">{item.tone}</p><span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">View case study <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1" /></span></div></div></Link></Reveal>)}
+            {work.map((item, i) => <Reveal key={item.name} delay={i * 80}><Link to="/oluwole/work" hash={item.id} className="group block"><div className="grid gap-7 md:grid-cols-12 md:items-center"><div className="md:col-span-7"><OluwoleFrame src={item.image.url} alt={`${item.name} website homepage`} label={`${item.name} / live work`} /></div><div className="md:col-span-5"><p className="font-mono text-xs text-primary">{item.number}</p><h3 className="mt-3 text-3xl font-semibold transition-colors group-hover:text-primary md:text-4xl">{item.name}</h3><p className="mt-2 text-sm text-muted-foreground">{item.type}</p><p className="mt-6 border-l border-primary pl-4 text-sm leading-relaxed text-muted-foreground">{item.tone}</p><span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">View case study <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1" /></span></div></div></Link></Reveal>)}
           </div>
         </div>
       </section>
