@@ -1,5 +1,0 @@
-- [x] Add the Oluwole visual theme and reusable frame component
-- [x] Build /oluwole home, work, about, and contact routes from the uploaded source content
-- [x] Add extracted project visuals as local source assets
-- [x] Wire the Oluwole layout into the root route without changing existing portfolios
-- [x] Verify routes, rendering, and metadata
